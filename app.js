@@ -1,29 +1,7 @@
-const toast = document.getElementById('toast');
-const year = document.getElementById('year');
-year.textContent = new Date().getFullYear();
-
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add('show');
-  clearTimeout(window.__toastTimer);
-  window.__toastTimer = setTimeout(() => toast.classList.remove('show'), 1800);
-}
-
-document.getElementById('shareBtn').addEventListener('click', async () => {
-  const data = { title: 'Ridh — Profile', text: 'Check out Ridh’s profile', url: location.href };
-  try {
-    if (navigator.share) await navigator.share(data);
-    else if (navigator.clipboard) { await navigator.clipboard.writeText(location.href); showToast('Profile link copied'); }
-    else showToast('Copy this page URL to share');
-  } catch (_) {}
-});
-
-document.querySelectorAll('.link').forEach(link => {
-  link.addEventListener('click', () => {
-    const name = link.querySelector('strong')?.textContent || 'link';
-    showToast(`Opening ${name}`);
-  });
-});
-
-// Subtle entrance animation without a framework.
-requestAnimationFrame(() => document.querySelector('.profile-card')?.classList.add('ready'));
+const toast=document.getElementById('toast');
+function showToast(message){toast.textContent=message;toast.classList.add('show');clearTimeout(window.__toastTimer);window.__toastTimer=setTimeout(()=>toast.classList.remove('show'),1800)}
+const views=document.getElementById('views');const key='ridh-profile-views';let count=Number(localStorage.getItem(key)||0);if(!sessionStorage.getItem('ridh-viewed')){count++;localStorage.setItem(key,count);sessionStorage.setItem('ridh-viewed','1')}views.textContent=count;
+const soundBtn=document.getElementById('soundBtn');let soundOn=false;soundBtn.addEventListener('click',()=>{soundOn=!soundOn;soundBtn.querySelector('span').textContent=soundOn?'♫':'⌁';showToast(soundOn?'Sound enabled':'Sound muted')});
+document.querySelectorAll('.socials a').forEach(a=>a.addEventListener('click',()=>showToast(`Opening ${a.getAttribute('aria-label')}`)));
+const glow=document.querySelector('.cursor-glow');window.addEventListener('pointermove',e=>{glow.style.left=e.clientX+'px';glow.style.top=e.clientY+'px'});
+requestAnimationFrame(()=>document.querySelector('.hero').classList.add('ready'));
