@@ -1,26 +1,25 @@
 <!doctype html>
-<html lang="en">
-<head>
-<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#07060a"><meta name="description" content="Ridh — E-Athlete profile"><title>Ridh — E-Athlete</title>
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
-</head>
+<html lang="en"><head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1.0"><meta name="theme-color" content="#050506"><meta name="description" content="Ridh — E-Athlete profile"><title>Ridh 02 — E-Athlete</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css"></head>
 <body>
-<div class="scene"><div class="moon"></div><div class="mist mist-a"></div><div class="mist mist-b"></div><div class="mountain m1"></div><div class="mountain m2"></div><div class="trees t1"></div><div class="trees t2"></div><div class="ground"></div><div class="sparkles"></div></div>
-<button class="sound" id="soundBtn" aria-label="Toggle sound"><span>⌁</span></button>
+<div class="scene"><div class="background-photo"></div><div class="darken"></div><div class="particles"></div></div>
+<button class="sound" id="soundBtn" aria-label="Play or pause music"><span id="soundIcon">◖</span></button>
+<audio id="music" preload="metadata" loop src="assets/song.mp3"></audio>
 <main class="hero">
-  <div class="avatar-wrap"><div class="avatar">R</div><span class="online"></span></div>
+  <div class="avatar-wrap"><img class="avatar" src="assets/pfp.jpg" alt="Ridh profile picture"><span class="online"></span></div>
   <h1>Ridh<sup>02</sup></h1>
   <div class="tagline">E - A T H L E T E <span>♣</span></div>
   <section class="discord-card">
-    <div class="mini-avatar">R</div><div class="discord-copy"><strong>ridh07</strong><span id="discordStatus">currently doing nothing</span></div><span class="discord-dot"></span>
+    <img class="mini-avatar" src="assets/pfp.jpg" alt=""><div class="discord-copy"><strong>Ridh07</strong><span>currently doing nothing</span></div><span class="discord-dot"></span>
   </section>
   <nav class="socials" aria-label="Social links">
-    <a href="https://instagram.com/ridh_x2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
-    <a href="https://snapchat.com/" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">♟</a>
-    <a href="https://open.spotify.com/" target="_blank" rel="noopener noreferrer" aria-label="Spotify">●</a>
+    <a href="https://instagram.com/auraflare_X2" target="_blank" rel="noopener noreferrer" aria-label="Instagram">◎</a>
+    <a href="https://www.snapchat.com/" target="_blank" rel="noopener noreferrer" aria-label="Snapchat">♟</a>
+    <a class="song" href="https://music.apple.com/us/album/na-ho-tum-single/6769815002" target="_blank" rel="noopener noreferrer" aria-label="Na Ho Tum"><img src="assets/song.jpg" alt="Na Ho Tum"></a>
   </nav>
+  <div class="song-label"><strong>Na Ho Tum</strong><span>Kalp • harshh</span></div>
   <div class="views"><span>◉</span><b id="views">0</b></div>
 </main>
 <div class="cursor-glow"></div><div class="toast" id="toast"></div>
-<script src="app.js"></script>
-</body></html>
+<script src="app.js"></script></body></html>
