@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ridh Profile — a premium gaming profile hub for links, socials, presence and stats." />
+  <title>Ridh Profile</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+  <main class="shell">
+    <section class="profile-card">
+      <div class="cover"></div>
+      <div class="profile-head">
+        <div class="avatar" aria-label="Ridh avatar">R</div>
+        <div class="identity">
+          <div class="name-row"><h1>Ridh</h1><span class="verified">✓</span></div>
+          <p>@ridh_x2</p>
+        </div>
+        <button class="share" id="shareBtn" type="button">↗ Share</button>
+      </div>
+      <p class="bio">E-Athlete • Gaming • Editing<br>Turning ideas into highlights.</p>
+
+      <div class="presence" id="presence">
+        <span class="status-dot"></span>
+        <div><strong id="presenceTitle">Currently gaming</strong><small id="presenceSub">Online now</small></div>
+        <span class="presence-game">VALORANT</span>
+      </div>
+
+      <div class="links" id="links">
+        <a class="link primary" href="https://instagram.com/ridh_x2" target="_blank" rel="noreferrer"><span>◎</span> Instagram <b>↗</b></a>
+        <a class="link" href="https://discord.com/" target="_blank" rel="noreferrer"><span>◈</span> Discord <b>↗</b></a>
+        <a class="link" href="https://youtube.com/" target="_blank" rel="noreferrer"><span>▶</span> YouTube <b>↗</b></a>
+        <a class="link" href="https://snapchat.com/" target="_blank" rel="noreferrer"><span>⌁</span> Snapchat <b>↗</b></a>
+      </div>
+
+      <div class="stats">
+        <div><strong>14</strong><span>Age</span></div>
+        <div><strong>FPS</strong><span>Gaming</span></div>
+        <div><strong>ESPORTS</strong><span>Focus</span></div>
+      </div>
+      <footer>Ridh Profile <span>•</span> <span id="year"></span></footer>
+    </section>
+  </main>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
